@@ -3,157 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KaspaLoT | 智能边缘 AI 与去中心化物联网协议</title>
-    <meta name="description" content="KaspaLoT 致力于结合 Kaspa 高性能区块链与边缘 AI 技术，为物联网设备提供秒级确认的 M2M 机器经济结算方案与本地化大模型推理能力。">
-    <meta name="keywords" content="Kaspa, KaspaLoT, IoT, 物联网区块链, 边缘AI, OpenClaw, 机器经济, 去中心化网络">
-    <meta name="author" content="KaspaLoT Labs">
-    
-    <meta property="og:title" content="KaspaLoT - 智能边缘，瞬时上链">
-    <meta property="og:description" content="基于 Kaspa 协议的下一代 AIoT 基础设施。">
-    <meta property="og:type" content="website">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { 
-            background-color: #f5f5f7; 
-            color: #1d1d1f; 
-            font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC", "Helvetica Neue", Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            scroll-behavior: smooth;
-        }
-        .apple-nav { 
-            background: rgba(245, 245, 247, 0.8); 
-            backdrop-filter: saturate(180%) blur(20px); 
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        .nav-link { 
-            color: #1d1d1f;
-            opacity: 0.7; 
-            font-size: 12px; 
-            transition: opacity 0.3s;
-        }
-        .nav-link:hover { opacity: 1; }
-        .hero-title { letter-spacing: -0.02em; font-weight: 700; line-height: 1.1; }
-        .hero-subtitle { color: #86868b; }
-        .btn-blue { 
-            background-color: #0071e3; 
-            color: #fff; 
-            border-radius: 980px; 
-            padding: 12px 28px; 
-            font-size: 17px; 
-            transition: all 0.2s;
-        }
-        .btn-blue:hover { background-color: #0077ed; transform: scale(1.02); }
-        .link-more { color: #06c; font-size: 19px; font-weight: 400; }
-        .link-more:hover { text-decoration: underline; }
-        .glass-card {
-            background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-    </style>
+    <title>🎰 幸运抽奖-PTN闹元宵</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="apple-nav h-12 w-full fixed top-0 z-[100]">
-        <nav class="container mx-auto h-full px-6 flex items-center justify-between max-w-[1024px]">
-            <a href="/" class="flex items-center font-bold tracking-tight text-lg">
-                KaspaLoT
-            </a>
-            <div class="hidden md:flex items-center space-x-10">
-                <a href="#vision" class="nav-link">技术愿景</a>
-                <a href="#infra" class="nav-link">基础架构</a>
-                <a href="#poc" class="nav-link">实验室</a>
-                <a href="#whitepaper" class="nav-link">技术白皮书</a>
-            </div>
-            <a href="#contact" class="text-[12px] bg-zinc-900 text-white px-3 py-1 rounded-full hover:bg-zinc-700 transition">加入社区</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="vision" class="relative pt-32 min-h-screen flex flex-col items-center justify-start text-center px-6 bg-[#f5f5f7]">
-            <h1 class="hero-title text-6xl md:text-[80px] mt-10 mb-4">KaspaLoT</h1>
-            <p class="hero-subtitle text-2xl md:text-3xl font-medium mb-12">智能边缘，瞬时上链。</p>
-            
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 items-center mb-20">
-                <a href="#infra" class="btn-blue font-semibold">深入了解技术</a>
-                <a href="#" class="link-more">获取开发者预览 <span class="ml-1 text-sm">〉</span></a>
-            </div>
-
-            <div class="mt-auto w-full max-w-5xl h-[400px] bg-white rounded-t-[40px] shadow-2xl border-x border-t border-zinc-200 p-8 flex items-center justify-center relative">
-                <div class="flex flex-col items-center">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse mb-4"></div>
-                    <p class="text-zinc-400 font-mono text-[11px] uppercase tracking-widest">Decentralized Mesh Network: Active</p>
+    <!-- 密码验证层 -->
+    <div id="passwordOverlay" class="password-overlay">
+        <div class="password-box">
+            <h2>🔒 请输入访问密码</h2>
+            <input type="password" id="passwordInput" placeholder="请输入密码" maxlength="10">
+            <button id="passwordBtn" class="btn btn-primary">进入系统</button>
+            <p id="passwordError" class="password-error">密码错误，请重试</p>
+        </div>
+    </div>
+    
+    <div class="bg-overlay"></div>
+    
+    <div class="container">
+        <h1 class="title">🎰 幸运抽奖-PTN闹元宵</h1>
+        
+        <div class="main-content">
+            <!-- 左侧：设置面板 -->
+            <div class="settings-panel" id="settingsPanel">
+                <div class="panel-toggle" id="panelToggle" title="展开/收起设置">
+                    <span class="toggle-icon">◀</span>
                 </div>
-            </div>
-        </section>
-
-        <section id="infra" class="py-32 px-6 text-center bg-white">
-            <div class="container mx-auto max-w-[1024px]">
-                <h2 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight text-[#1d1d1f]">不仅仅是连接，更是进化。</h2>
-                <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-[#86868b] leading-relaxed">
-                    依托 <strong>Kaspa</strong> 的 BlockDAG 秒级确认与 <strong>Edge AI</strong> 的自主决策，KaspaLoT 为物联网设备赋予了真正的去中心化“大脑”，实现低延迟、高吞吐的机器经济。
-                </p>
-                <div class="flex justify-center space-x-12">
-                    <div class="text-left border-l-2 border-blue-500 pl-4">
-                        <div class="text-3xl font-bold">1 Sec</div>
-                        <div class="text-sm text-zinc-500">交易确认速度</div>
+                
+                <div class="panel-content" id="panelContent">
+                    <div class="panel-section">
+                        <h3>📝 抽奖名单</h3>
+                        <textarea id="namesInput" placeholder="输入名字或编号，每行一个&#10;例如：&#10;1&#10;2&#10;3">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</textarea>
+                        <button id="updateNamesBtn" class="btn btn-primary">更新名单</button>
                     </div>
-                    <div class="text-left border-l-2 border-blue-500 pl-4">
-                        <div class="text-3xl font-bold">70B+</div>
-                        <div class="text-sm text-zinc-500">边缘模型参数支持</div>
+                    
+                    <div class="panel-section">
+                        <h3>🖼️ 背景设置</h3>
+                        <input type="file" id="bgImageInput" accept="image/*" hidden>
+                        <button id="uploadBgBtn" class="btn btn-secondary">上传背景图</button>
+                        <button id="resetBgBtn" class="btn btn-text">恢复默认</button>
+                    </div>
+                    
+                    <div class="panel-section">
+                        <h3>⚙️ 其他设置</h3>
+                        <label>
+                            <input type="checkbox" id="removeWinner">
+                            中奖后移除该名字
+                        </label>
+                    </div>
+                    
+                    <div class="panel-section history-section">
+                        <h3>🏆 中奖记录</h3>
+                        <ul id="historyList"></ul>
+                        <button id="clearHistoryBtn" class="btn btn-text">清空记录</button>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="poc" class="grid md:grid-cols-2 gap-6 p-6 bg-[#f5f5f7]">
-            <article class="glass-card py-20 px-10 text-center flex flex-col items-center justify-between min-h-[480px]">
-                <div>
-                    <h3 class="text-3xl font-bold mb-4">M2M 机器经济</h3>
-                    <p class="text-lg text-[#86868b]">基于 Kaspa 微支付协议，实现工业设备间的自动资源结算与算力共享。</p>
-                </div>
-                <a href="#" class="link-more">了解结算系统 〉</a>
-            </article>
             
-            <article class="glass-card py-20 px-10 text-center flex flex-col items-center justify-between min-h-[480px]">
-                <div>
-                    <h3 class="text-3xl font-bold mb-4">Edge AI 神经网</h3>
-                    <p class="text-lg text-[#86868b]">集成 OpenClaw 协议，在边缘节点实现本地大语言模型（LLM）的安全推理。</p>
+            <!-- 中间：转盘 -->
+            <div class="wheel-container">
+                <div class="wheel-wrapper">
+                    <canvas id="wheelCanvas" width="500" height="500"></canvas>
+                    <div class="pointer">▼</div>
                 </div>
-                <a href="#" class="link-more">开发者工具箱 〉</a>
-            </article>
-        </section>
-    </main>
-
-    <footer class="bg-[#f5f5f7] py-20 px-6 text-zinc-500">
-        <div class="container mx-auto max-w-[1024px] text-[12px]">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-zinc-300 pb-12 mb-12">
-                <div class="flex flex-col space-y-3">
-                    <p class="font-bold text-zinc-800">技术栈</p>
-                    <a href="#" class="hover:text-zinc-800">Kaspa BlockDAG</a>
-                    <a href="#" class="hover:text-zinc-800">OpenClaw 协议</a>
-                    <a href="#" class="hover:text-zinc-800">边缘计算节点</a>
-                </div>
-                <div class="flex flex-col space-y-3">
-                    <p class="font-bold text-zinc-800">开发者</p>
-                    <a href="#" class="hover:text-zinc-800">文档</a>
-                    <a href="#" class="hover:text-zinc-800">GitHub</a>
-                    <a href="#" class="hover:text-zinc-800">API 参考</a>
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <p>Copyright © 2026 KaspaLoT Labs. </p>
-                <div class="flex gap-x-6 text-zinc-600">
-                    <a href="#" class="hover:underline">隐私协议</a>
-                    <a href="#" class="hover:underline">法律声明</a>
-                </div>
+                <button id="spinBtn" class="spin-btn">开始抽奖 <span class="shortcut">(空格)</span></button>
             </div>
         </div>
-    </footer>
-
+    </div>
+    
+    <!-- 中奖弹窗 -->
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>🎉 恭喜中奖！</h2>
+            <div id="winnerName" class="winner-name"></div>
+            <button id="continueBtn" class="btn btn-primary">继续抽奖</button>
+        </div>
+    </div>
+    
+    <footer class="footer">@本系统由PTN AI智能体自动生成,自动维护</footer>
+    <script src="script.js"></script>
 </body>
-
 </html>
