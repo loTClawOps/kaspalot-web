@@ -68,6 +68,18 @@
         .nav-logo:hover {
             opacity: 1;
         }
+        /* Logo 文字样式 */
+        .nav-logo-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1d1d1f;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+            letter-spacing: -0.01em;
+        }
+        .nav-logo-text:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -78,10 +90,11 @@
             <div class="w-20"></div>
             
             <!-- 中间：所有导航项在一行，Logo作为第一个 -->
-            <div class="hidden md:flex items-center space-x-10">
-                <!-- Logo 作为导航链接第一个 -->
-                <a href="#" class="flex items-center">
+            <div class="hidden md:flex items-center space-x-8">
+                <!-- Logo 和文字组合 -->
+                <a href="#" class="flex items-center space-x-2 group">
                     <img src="pic/logo1.png" alt="KaspaLoT" class="nav-logo">
+                    <span class="nav-logo-text">KaspaLoT</span>
                 </a>
                 <a href="#vision" class="nav-link">技术愿景</a>
                 <a href="#infra" class="nav-link">基础架构</a>
