@@ -57,11 +57,16 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             border: 1px solid rgba(0,0,0,0.05);
         }
-        /* Logo 图片样式 */
-        .logo-img {
-            height: 28px;
+        /* 导航栏 Logo 样式 - 作为导航项 */
+        .nav-logo {
+            height: 20px;
             width: auto;
             object-fit: contain;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .nav-logo:hover {
+            opacity: 1;
         }
     </style>
 </head>
@@ -69,17 +74,23 @@
 
     <header class="kaspalot-nav h-12 w-full fixed top-0 z-[100]">
         <nav class="container mx-auto h-full px-6 flex items-center justify-between max-w-[1024px]">
-            <!-- 图片 Logo -->
-            <a href="#" class="flex items-center">
-                <img src="pic/logo1.png" alt="KaspaLoT" class="logo-img">
-            </a>
+            <!-- 左侧留白或放其他内容（保持布局平衡） -->
+            <div class="w-20"></div>
+            
+            <!-- 中间：所有导航项在一行，Logo作为第一个 -->
             <div class="hidden md:flex items-center space-x-10">
+                <!-- Logo 作为导航链接第一个 -->
+                <a href="#" class="flex items-center">
+                    <img src="pic/logo1.png" alt="KaspaLoT" class="nav-logo">
+                </a>
                 <a href="#vision" class="nav-link">技术愿景</a>
                 <a href="#infra" class="nav-link">基础架构</a>
                 <a href="#poc" class="nav-link">实验室</a>
                 <a href="#whitepaper" class="nav-link">技术白皮书</a>
             </div>
-            <a href="#contact" class="text-[12px] bg-zinc-900 text-white px-3 py-1 rounded-full hover:bg-zinc-700 transition">加入社区</a>
+            
+            <!-- 右侧：加入社区按钮 -->
+            <a href="#contact" class="text-[12px] bg-zinc-900 text-white px-3 py-1 rounded-full hover:bg-zinc-700 transition w-20 text-center">加入社区</a>
         </nav>
     </header>
 
